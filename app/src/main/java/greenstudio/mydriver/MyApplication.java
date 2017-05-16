@@ -32,6 +32,7 @@ public class MyApplication extends Application {
 
     @Override
     public void onCreate() {
+        super.onCreate();
         JuheKey = "a745ee881e86ccc3a99ab70f7e0b4c20";
         queue = Volley.newRequestQueue(getApplicationContext());
         DiskCacheConfig diskCacheConfig = DiskCacheConfig.newBuilder(getApplicationContext())
