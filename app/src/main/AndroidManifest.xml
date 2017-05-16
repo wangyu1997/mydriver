@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="greenstudio.mydriver">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/logicon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme">
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Regist1Activity"></activity>
+        <activity android:name=".Regist2Activity"></activity>
+        <activity android:name=".ResetPassword1Activity"></activity>
+        <activity android:name=".ResetPassword2Activity"></activity>
+        <activity android:name=".ResetPassword3Activity"></activity>
+        <activity android:name=".MakeUpActivity"></activity>
+        <activity android:name=".exec_activity"></activity>
+        <activity android:name=".cuoti_activity"></activity>
+        <activity android:name=".shoucang_activity"></activity>
+        <activity
+            android:name=".jiakao_activity_kemu1"
+            android:launchMode="singleTask"></activity>
+        <activity
+            android:name=".xueche_activity"
+            android:launchMode="singleTask"></activity>
+        <activity
+            android:name=".jiakao_activity_kemu2"
+            android:launchMode="singleTask"></activity>
+        <activity
+            android:name=".jiakao_activity_kemu3"
+            android:launchMode="singleTask"></activity>
+        <activity
+            android:name=".jiakao_activity_kemu4"
+            android:launchMode="singleTask"></activity>
+        <activity
+            android:name=".person_activity"
+            android:launchMode="singleTask"></activity>
+        <activity android:name=".JiaxiaoInfoActivity"></activity>
+        <activity
+            android:name=".PlayVideoWebViewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true"></activity>
+    </application>
+</manifest>

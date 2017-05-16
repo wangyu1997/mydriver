@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/back_shape"
+            android:orientation="vertical"
+            android:paddingBottom="20dp"
+            android:paddingLeft="10sp"
+            android:paddingRight="10dp"
+            android:paddingTop="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btn_collect"
+                    android:layout_width="60dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/app_primary"
+                    android:gravity="center"
+                    android:text="收藏"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="水淹路面影响行车安全，不易通行的原因是什么？"
+                android:textSize="20sp" />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/picture"
+                android:layout_width="300dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                fresco:actualImageScaleType="focusCrop" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/check_a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="路面附着力增大"
+                    android:textColor="@color/black_semi_transparent"
+                    android:textSize="18sp" />
+
+                <CheckBox
+                    android:id="@+id/check_b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="无法观察到暗坑和凸起的路面"
+                    android:textColor="@color/black_semi_transparent"
+                    android:textSize="18sp" />
+
+                <CheckBox
+                    android:id="@+id/check_c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="能见度低，视野模糊"
+                    android:textColor="@color/black_semi_transparent"
+                    android:textSize="18sp" />
+
+                <CheckBox
+                    android:id="@+id/check_d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="日光反射阻挡视线"
+                    android:textColor="@color/black_semi_transparent"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_greencorner_selector"
+                android:gravity="center"
+                android:text="提交答案"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:id="@+id/right_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/right" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:text="恭喜您！回答正确！"
+                    android:textColor="@color/app_primary_dark"
+                    android:textSize="22sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/wrong_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="解析: "
+                    android:textColor="@color/red"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/explain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="因为水淹没了路面，所以看不清是暗坑和凸起的路面"
+                    android:textColor="@color/red"
+                    android:textSize="22sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/updateBaseInfoProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="invisible" />
+
+</RelativeLayout>
